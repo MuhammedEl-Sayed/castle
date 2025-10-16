@@ -24,15 +24,15 @@ export default function Home() {
         <div className="mt-10 flex flex-col items-center">
           <div className="relative w-44 h-44 rounded-full overflow-hidden border-8 border-white/70 shadow-[0_15px_40px_rgba(0,0,0,0.15)]">
             <Image
-              src="/portrait-placeholder.jpg"
-              alt="Your portrait"
+              src="/profile.png"
+              alt="Artistic portrait of my face"
               fill
               className="object-cover filter sepia-[0.25] brightness-[0.96]"
             />
             <div className="absolute inset-0 rounded-full shadow-inner shadow-black/30 pointer-events-none" />
           </div>
           <p className="text-sm text-parchment-ink/60 mt-3">
-            Built with Lora • Soft fantasy • Projects from GitHub
+            Built with Next.js with AstroNvim • Soft fantasy • Projects from GitHub
           </p>
         </div>
       </section>
