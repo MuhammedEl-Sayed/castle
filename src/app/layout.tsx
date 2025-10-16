@@ -24,7 +24,6 @@ export default function RootLayout({
         className={`${lora.className} bg-parchment-texture min-h-screen text-parchment-ink antialiased`}
       >
         {children}
-        <FlameCanvas />
       </body>
     </html>
   );
