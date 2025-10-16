@@ -8,7 +8,6 @@ export default function Home() {
       <header className="w-full flex justify-between items-center mb-10">
         <h1 className="text-3xl font-bold">Well Met, Traveler</h1>
         <nav className="space-x-6 text-sm uppercase tracking-widest text-parchment-ink/70">
-          <a href="#projects">Projects</a>
           <a href="https://github.com/MuhammedEl-Sayed">Github</a>
           <a href="https://www.linkedin.com/in/muhammedelsayed/">LinkedIn</a>
         </nav>
