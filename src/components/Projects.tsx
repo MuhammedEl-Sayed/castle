@@ -1,4 +1,3 @@
-// components/Projects.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -9,7 +8,15 @@ export default function Projects() {
   useEffect(() => {
     fetch("https://api.github.com/users/MuhammedEl-Sayed/repos")
       .then((res) => res.json())
-      .then(setRepos);
+      .then((data) => {
+        const filteredAndSorted = data
+          .filter((repo: any) => !repo.fork) // remove forks
+          .sort(
+            (a: any, b: any) =>
+              new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+          ); // sort by most recent update
+        setRepos(filteredAndSorted);
+      });
   }, []);
 
   return (
@@ -38,4 +45,3 @@ export default function Projects() {
     </section>
   );
 }
-
