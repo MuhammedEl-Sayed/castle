@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="max-w-6xl mx-auto p-6 flex flex-col items-center text-center">
       <header className="w-full flex justify-between items-center mb-10">
-        <h1 className="text-3xl font-bold">Castle Muhammed</h1>
+        <h1 className="text-3xl font-bold">Well Met, Traveler</h1>
         <nav className="space-x-6 text-sm uppercase tracking-widest text-parchment-ink/70">
           <a href="#projects">Projects</a>
           <a href="https://github.com/MuhammedEl-Sayed">Github</a>
@@ -32,14 +32,15 @@ export default function Home() {
             <div className="absolute inset-0 rounded-full shadow-inner shadow-black/30 pointer-events-none" />
           </div>
           <p className="text-sm text-parchment-ink/60 mt-3">
-            Built with Next.js with AstroNvim • Soft fantasy • Projects from GitHub
+            Built with Next.js • Soft fantasy • Projects from GitHub
           </p>
         </div>
       </section>
+      <Suspense>
 
-      {/* Projects are dynamically fetched client-side */}
       <Projects />
 
+      </Suspense>
       <footer className="mt-24 text-sm text-parchment-ink/60">
         © {new Date().getFullYear()} Castle. Crafted with Next.js.
       </footer>

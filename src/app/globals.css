@@ -1,2 +1,7 @@
 @import "tailwindcss";
 
+canvas {
+  mix-blend-mode: screen;
+  filter: blur(1px) brightness(1.2);
+}
+

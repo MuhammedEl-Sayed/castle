@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Lora } from "next/font/google";
 import "./globals.css";
+import FlameCanvas from "@/components/FlameCanvas";
 
 const lora = Lora({
-  subsets: ["lora"],
+  subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${lora.className} bg-parchment-texture min-h-screen text-parchment-ink antialiased`}
       >
         {children}
+        <FlameCanvas />
       </body>
     </html>
   );
