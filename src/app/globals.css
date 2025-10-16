@@ -1,7 +1,37 @@
 @import "tailwindcss";
 
-canvas {
-  mix-blend-mode: screen;
-  filter: blur(1px) brightness(1.2);
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+/* === THEME CONFIG (Tailwind v4) === */
+@theme {
+	/* fonts */
+	--font-lora: "Lora", serif;
+
+	/* colors */
+	--color-parchment-light: #f6ecd9;
+	--color-parchment-mid: #efe3c6;
+	--color-parchment-dark: #e5d6b4;
+	--color-parchment-ink: #3b2f2a;
+	--color-parchment-accent: #b07a48;
+
+	/* background images must start with --background-image-* */
+	--background-image-parchment-texture: radial-gradient(
+			1200px 400px at 10% 15%,
+			rgba(224, 190, 150, 0.18),
+			transparent 20%
+		),
+		radial-gradient(
+			1200px 400px at 90% 85%,
+			rgba(206, 170, 122, 0.12),
+			transparent 20%
+		),
+		linear-gradient(180deg, #f6ecd9 0%, #efe3c6 40%, #e5d6b4 100%);
 }
 
+/* === BASE STYLES === */
+@layer base {
+	body {
+		@apply font-lora bg-[image:var(--background-image-parchment-texture)] text-parchment-ink antialiased min-h-screen;
+	}
+}
