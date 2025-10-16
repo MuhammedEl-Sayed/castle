@@ -19,8 +19,8 @@ export default function FlameCanvas() {
     window.addEventListener("resize", resize);
 
     const drawFlame = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let x = 0; x < canvas.width; x += 20) {
+      ctx.clearRect(0, 0, canvas.width * 3, canvas.height);
+      for (let x = 0; x < canvas.width; x += 100) {
         const h = Math.random() * 60 + 40;
         ctx.strokeStyle = `rgba(255, ${120 + Math.random() * 100}, 50, 0.5)`;
         ctx.beginPath();
