@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Projects from "@/components/Projects"
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
           <a href="#projects">Projects</a>
           <a href="https://github.com/MuhammedEl-Sayed">Github</a>
           <a href="https://www.linkedin.com/in/muhammedelsayed/">LinkedIn</a>
-        </nav> 
+        </nav>
       </header>
 
       <section className="max-2xl">
@@ -37,12 +38,10 @@ export default function Home() {
         </div>
       </section>
       <Suspense>
-
-      <Projects />
-
+        <Projects />
       </Suspense>
       <footer className="mt-24 text-sm text-parchment-ink/60">
         © {new Date().getFullYear()} Castle. Crafted with Next.js.
       </footer>
-    </main>  );
+    </main>);
 }

@@ -10,6 +10,14 @@ export default function FlameCanvas() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // ✅ Resize after mount (no SSR mismatch)
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = 120;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
     const drawFlame = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let x = 0; x < canvas.width; x += 20) {
@@ -22,20 +30,21 @@ export default function FlameCanvas() {
       }
     };
 
-    function loop() {
+    const loop = () => {
       drawFlame();
       requestAnimationFrame(loop);
-    }
+    };
     loop();
+
+    return () => window.removeEventListener("resize", resize);
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      width={typeof window !== "undefined" ? window.innerWidth : 1200}
+      width={1200}  // ✅ Static width for SSR
       height={120}
       className="fixed bottom-0 left-0 w-screen h-[120px] opacity-80 mix-blend-screen pointer-events-none z-50"
     />
   );
 }
-
