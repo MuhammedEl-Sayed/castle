@@ -24,7 +24,6 @@ export default function RootLayout({
       <body
         className={`${lora.className} bg-parchment-texture min-h-screen text-parchment-ink antialiased`}
       >
-                <CustomCursor />
         {children}
       </body>
     </html>
