@@ -33,6 +33,10 @@
 @layer base {
 	body {
 		@apply font-lora bg-[image:var(--background-image-parchment-texture)] text-parchment-ink antialiased min-h-screen;
-		cursor: url('https://www.rw-designer.com/cursor-extern.php?id=1138'), auto;
+		cursor: url('http://www.rw-designer.com/cursor-extern.php?id=1141'), auto;
+	}
+
+	body:hover {
+		cursor: url('http://www.rw-designer.com/cursor-extern.php?id=1116'), pointer;
 	}
 }
