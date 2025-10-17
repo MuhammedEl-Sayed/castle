@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Projects() {
@@ -21,8 +22,36 @@ export default function Projects() {
 
   return (
     <section id="projects" className="mt-20 w-full">
+
       <h3 className="text-3xl font-semibold mb-8">My Projects</h3>
+
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article
+          className="bg-white/30 border border-black/10 rounded-xl p-4 hover:-translate-y-1 hover:shadow-lg transition-all col-span-full flex flex-col items-center"
+        >
+
+          <div className='relative w-22 h-22 rounded-full overflow-hidden border-8 border-white/70 shadow-[0_15px_40px_rgba(0,0,0,0.15)] mb-4'>
+            <Image
+              src='/valysis.png'
+              alt='Logo for Valysis'
+              fill
+              className='object-cover filter sepia-[0.25] brightness-[0.96]'
+            />
+
+            <div className='absolute inset-0 rounded-full shadow-inner shadow-black/30 pointer-events-none' />
+          </div>
+          <h4 className="text-xl font-semibold">Valysis</h4>
+          <p className="text-sm text-parchment-ink/70 mt-1">
+            {"Cross-platform Flutter application for Valorant players to analyze and improve their gameplay through detailed statistics and insights."}
+          </p>
+          <a
+            href={"https://valysis.com/"}
+            target="_blank"
+            className="text-parchment-accent mt-2 inline-block text-sm"
+          >
+            Checkout on valysis.com
+          </a>
+        </article>
         {repos.map((repo) => (
           <article
             key={repo.id}
