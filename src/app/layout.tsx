@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora } from "next/font/google";
 import "./globals.css";
 import FlameCanvas from "@/components/FlameCanvas";
+import CustomCursor from "@/components/CustomCursor";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${lora.className} bg-parchment-texture min-h-screen text-parchment-ink antialiased`}
       >
+                <CustomCursor />
         {children}
       </body>
     </html>

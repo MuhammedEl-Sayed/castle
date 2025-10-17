@@ -17,9 +17,9 @@ export default function Home() {
 				<h2 className='text-6xl sm:text-7xl font-bold leading-tight'>
 					Fantasy, Code, & Curiosity
 				</h2>
-				<h3 className='text-4xl sm:text-7xl font-bold leading-tight'>
-					by <strong>Muhammed El-Sayed</strong>
-				</h3>
+				<strong className='text-xl sm:text-2xl font-bold leading-tight'>
+					by Muhammed El-Sayed
+				</strong>
 				<p className='text-lg text-parchment-ink/70 mt-4'>
 					A curated collection of products and projects, primarily from GitHub
 				</p>
@@ -35,7 +35,7 @@ export default function Home() {
 						<div className='absolute inset-0 rounded-full shadow-inner shadow-black/30 pointer-events-none' />
 					</div>
 					<p className='text-sm text-parchment-ink/60 mt-3'>
-						Built with Next.js • Soft fantasy • Projects from GitHub
+						Built with Next.js • Soft fantasy theme
 					</p>
 				</div>
 			</section>
