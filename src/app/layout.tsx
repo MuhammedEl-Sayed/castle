@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora } from "next/font/google";
 import "./globals.css";
 import FlameCanvas from "@/components/FlameCanvas";
+import NaviCanvas from "@/components/NaviCanvas";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${lora.className} bg-parchment-texture min-h-screen text-parchment-ink antialiased`}
       >
+        <NaviCanvas count={3} />
         {children}
       </body>
     </html>

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
@@ -6,7 +6,7 @@
 /* === THEME CONFIG (Tailwind v4) === */
 @theme {
 	/* fonts */
-	--font-lora: 'Lora', serif;
+	--font-lora: "Lora", serif;
 
 	/* colors */
 	--color-parchment-light: #f6ecd9;
@@ -33,7 +33,10 @@
 @layer base {
 	body {
 		@apply font-lora bg-[image:var(--background-image-parchment-texture)] text-parchment-ink antialiased min-h-screen;
-		cursor: url('http://www.rw-designer.com/cursor-extern.php?id=1138'), auto;
+		cursor: url("http://www.rw-designer.com/cursor-extern.php?id=1138"), auto;
 	}
+}
 
+a:hover {
+	cursor: url("http://www.rw-designer.com/cursor-extern.php?id=1117"), auto;
 }
