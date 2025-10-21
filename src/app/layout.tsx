@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Lora } from "next/font/google";
 import "./globals.css";
-import FlameCanvas from "@/components/FlameCanvas";
 import NaviCanvas from "@/components/NaviCanvas";
 
 const lora = Lora({
