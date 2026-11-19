@@ -7,4 +7,4 @@ npm install
 npm run dev
 ```
 
-Projects are listed in `src/content/projects.ts` and work highlights in `src/content/work.ts`. Images for project cards go in `public/projects/`.
+Projects are listed in `src/content/projects.ts`. Images for project cards go in `public/projects/`.

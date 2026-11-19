@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import Projects from '@/components/Projects';
-import Work from '@/components/Work';
 
 const links = [
 	{ label: 'Projects', href: '#projects' },
-	{ label: 'Work', href: '#work' },
 	{ label: 'GitHub', href: 'https://github.com/MuhammedEl-Sayed' },
 	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammedelsayed/' },
 ];
@@ -57,7 +55,6 @@ export default function Home() {
 			</section>
 
 			<Projects />
-			<Work />
 
 			<footer className='mt-24 text-sm text-parchment-ink/60'>
 				© {new Date().getFullYear()} Muhammed El-Sayed. Built with Next.js.
