@@ -33,10 +33,20 @@
 @layer base {
 	body {
 		@apply font-lora bg-[image:var(--background-image-parchment-texture)] text-parchment-ink antialiased min-h-screen;
-		cursor: url("http://www.rw-designer.com/cursor-extern.php?id=1138"), auto;
+		cursor: url("/cursors/sword.cur"), url("/cursors/sword.png") 1 1, auto;
 	}
-}
 
-a:hover {
-	cursor: url("http://www.rw-designer.com/cursor-extern.php?id=1117"), auto;
+	a {
+		cursor: url("/cursors/bow.cur"), url("/cursors/bow.png") 0 0, pointer;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
 }
