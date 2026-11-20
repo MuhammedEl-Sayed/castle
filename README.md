@@ -1,6 +1,6 @@
 # castle
 
-The source for [muhammed-elsayed.com](https://muhammed-elsayed.com), a fantasy themed portfolio built with Next.js and Tailwind.
+The source for [muhammed-elsayed.com](https://muhammed-elsayed.com), my portfolio, built with Next.js.
 
 ```bash
 npm install

@@ -1,16 +1,23 @@
-import type { Metadata } from 'next';
-import { Lora } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import { Cormorant_Garamond, Lora } from 'next/font/google';
 import './globals.css';
-import NaviCanvas from '@/components/NaviCanvas';
+import Fairies from '@/components/Fairies';
 
-const lora = Lora({
+const display = Cormorant_Garamond({
 	subsets: ['latin'],
-	weight: ['400', '600', '700'],
+	weight: ['500', '600', '700'],
+	variable: '--font-display',
+});
+
+const body = Lora({
+	subsets: ['latin'],
+	weight: ['400', '500', '600'],
+	variable: '--font-body',
 });
 
 const title = 'Muhammed El-Sayed';
 const description =
-	'Infrastructure engineer at Remedy. Projects include Valysis, a Valorant stats app, and FrameBoy, a Warframe companion app.';
+	'Software engineer. Projects include Valysis, a Valorant stats app, and FrameBoy, a Warframe companion app.';
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://muhammed-elsayed.com'),
@@ -32,17 +39,20 @@ export const metadata: Metadata = {
 	},
 };
 
+export const viewport: Viewport = {
+	themeColor: '#101a16',
+	colorScheme: 'dark',
+};
+
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body
-				className={`${lora.className} bg-parchment-texture min-h-screen text-parchment-ink antialiased`}
-			>
-				<NaviCanvas count={3} />
+		<html lang='en' className={`${display.variable} ${body.variable}`}>
+			<body>
+				<Fairies count={3} />
 				{children}
 			</body>
 		</html>

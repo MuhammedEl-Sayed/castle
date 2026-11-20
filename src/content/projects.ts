@@ -17,11 +17,10 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'FrameBoy',
-		description:
-			'Tracks Warframe recipes, relics and resources from your phone, so you spend less time digging through menus.',
+		description: 'Tracks Warframe recipes, relics and resources from your phone.',
 		image: '/projects/frameboy.png',
 		imageBackground: '#202020',
-		status: 'Coming soon to Google Play and the App Store',
+		status: 'Coming soon to iOS and Android',
 		link: { href: 'https://frameboy.app/', label: 'Visit frameboy.app' },
 	},
 	{
