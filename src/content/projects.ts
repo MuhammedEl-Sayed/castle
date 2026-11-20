@@ -26,6 +26,8 @@ export const projects: Project[] = [
 	{
 		name: 'yarn',
 		description: 'Mobile todo and chores app written in Flutter.',
+		image: '/projects/yarn.png',
+		imageBackground: '#000000',
 		link: {
 			href: 'https://github.com/MuhammedEl-Sayed/yarn',
 			label: 'View on GitHub',
